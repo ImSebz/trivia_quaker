@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-background {
+    background-image: url(../assets/fondy_baby_quaker_main.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-inicio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25%;
+}
+
+.logo-inicio img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.btn-inicio {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.btn-inicio img {
+    width: 90%;
+    height: 90%;
+    max-width: 300px;
+    filter: drop-shadow(0 0 1rem crimson);
+}
+
+.btn-inicio img:hover{
+    scale: 1.1;
+    transition: 0.5s ease-out;
+}

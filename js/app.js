@@ -1,7 +1,6 @@
 //Referencias HTML
 const btnInicio = document.querySelector('.btn-inicio');
 
-
 //Eventos
 btnInicio.addEventListener('click', () => {
     setTimeout(() => {

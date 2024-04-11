@@ -10,6 +10,7 @@
     --main-green: #5AB557;
     --secondary-green: #95D38E;
     --main-dark: #001D2C;
+    --secondary-dark: #657886;
     --main-blue: #01A0C6;
     --secondary-blue: #4DBDD7;
     --borders: #A36340;
@@ -95,12 +96,11 @@ body {
 }
 
 .trivia-option {
+    position: relative;
     width: 75%;
-    min-height: 50px;
+    height: 95px;
     background-color: #fff;
     margin-bottom: 45px;
-    border: 3px solid var(--borders);
-    border-style: dashed;
     border-radius: 20px;
 }
 
@@ -110,7 +110,83 @@ body {
     align-items: center;
     padding: 20px;
     font-size: 2.5rem;
+    margin-left: 45px;
 }
+
+.blue-option {
+    background-color: var(--secondary-blue);
+    color: #fff;
+}
+
+.pink-option {
+    background-color: var(--secondary-pink);
+    color: #fff;
+}
+
+.green-option {
+    background-color: var(--secondary-green);
+    color: #fff;
+}
+
+.dark-option {
+    background-color: var(--secondary-dark);
+    color: #fff;
+}
+
+.trivia-option::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    line-height: 40px;
+    font-size: 4.5rem;
+}
+
+.blue-option::before {
+    content: "A";
+    background-color: var(--main-blue);
+    color: #fff;
+}
+
+.pink-option::before {
+    content: "B";
+    background-color: var(--main-pink);
+    color: #fff;
+}
+
+.green-option::before {
+    content: "C";
+    background-color: var(--main-green);
+    color: #fff;
+}
+
+.dark-option::before {
+    content: "D";
+    background-color: var(--main-dark);
+    color: #fff;
+}
+
+.correct-option::before {
+    background-color: green;
+}
+
+.incorrect-option::before {
+    background-color: red;
+}
+
+
+
+
 
 /* .trivia-option:hover {
     transition: 0.5s ease-out;

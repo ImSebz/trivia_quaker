@@ -46,7 +46,8 @@ fetch(jsonPath)
 
             //Itera sobre cada opción de la pregunta actual
             //Aplico la función shuffleArray para que las opciones se muestren en orden aleatorio
-            shuffleArray(triviaItem.options).forEach((option, index) => {
+            // shuffleArray(triviaItem.options);
+            triviaItem.options.forEach((option, index) => {
                 const optionElement = document.createElement('div');
                 optionElement.classList.add('trivia-option');
 
@@ -69,9 +70,12 @@ fetch(jsonPath)
                     // Verifica si la opción es correcta o no y cambia el color del contenedor en consecuencia
                     if (option.isCorrect) {
                         optionElement.style.backgroundColor = 'green';
+                        optionElement.classList.add('correct-option');
+                        
                         correctAnswers++;
                     } else {
                         optionElement.style.backgroundColor = 'red';
+                        optionElement.classList.add('incorrect-option');
                     }
 
                     // Espera un segundo, luego pasa a la siguiente pregunta

@@ -1,0 +1,198 @@
+[
+    {
+        "question": "¿Cuáles son las variedades que tiene Baby Quaker?",
+        "options": [
+            {
+                "text": "Avena-Fresa - Multicereal",
+                "isCorrect": false
+            },
+            {
+                "text": "Multicereal - Avena-banano",
+                "isCorrect": true
+            },
+            {
+                "text": "Avena-banano - Trigo-Banano",
+                "isCorrect": false
+            },
+            {
+                "text": "Multicereal - Trigo-Banano",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Baby Quaker Banano tiene 9 vitaminas que contribuyen al funcionamiento normal de:",
+        "options": [
+            {
+                "text": "El sistema inmunológico",
+                "isCorrect": false
+            },
+            {
+                "text": "La función cognitiva",
+                "isCorrect": false
+            },
+            {
+                "text": "El sistema nervioso",
+                "isCorrect": false
+            },
+            {
+                "text": "Todas son correctas",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "La variedad de Avena Banano tiene",
+        "options": [
+            {
+                "text": "Avena Quaker y pulpa de banano",
+                "isCorrect": true
+            },
+            {
+                "text": "Avena y miel",
+                "isCorrect": false
+            },
+            {
+                "text": "Banano y arroz",
+                "isCorrect": false
+            },
+            {
+                "text": "Harina de trigo y sabor a banano",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Baby Quaker es una fuente de ácido fólico (vitamina B9):",
+        "options": [
+            {
+                "text": "Verdadero",
+                "isCorrect": true
+            },
+            {
+                "text": "Falso",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Baby Quaker de Multicereal contiene:",
+        "options": [
+            {
+                "text": "Avena Quaker",
+                "isCorrect": false
+            },
+            {
+                "text": "Arroz",
+                "isCorrect": false
+            },
+            {
+                "text": "Maíz",
+                "isCorrect": false
+            },
+            {
+                "text": "Todas las anteriores",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "¡Preparar Baby Quaker es muy fácil! Solo debes agregar la leche del consumo habitual de tu bebé y mezclar",
+        "options": [
+            {
+                "text": "Verdadero",
+                "isCorrect": true
+            },
+            {
+                "text": "Falso",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "La fórmula de Baby Quaker es excelente fuente de hierro:",
+        "options": [
+            {
+                "text": "Verdadero",
+                "isCorrect": true
+            },
+            {
+                "text": "Falso",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Los cereales de Baby Quaker tienen tecnología de fácil digestión:",
+        "options": [
+            {
+                "text": "Verdadero",
+                "isCorrect": true
+            },
+            {
+                "text": "Falso",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "¿Cuáles de los siguientes nutrientes encuentras en Baby Quaker",
+        "options": [
+            {
+                "text": "Hierro y Zinc",
+                "isCorrect": false
+            },
+            {
+                "text": "Vitamina B6, B12 y Ácido Fólico",
+                "isCorrect": false
+            },
+            {
+                "text": "Vitamina C, A",
+                "isCorrect": false
+            },
+            {
+                "text": "Todas las anteriores",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "question": "Los cereales de Baby Quaker son hechos con cereales 100% naturales.",
+        "options": [
+            {
+                "text": "Verdadero",
+                "isCorrect": true
+            },
+            {
+                "text": "Falso",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Baby Quaker es:",
+        "options": [
+            {
+                "text": "Un cereal infantil",
+                "isCorrect": true
+            },
+            {
+                "text": "Una avena para preparar",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "question": "Los 2 primeros años de alimentación del bebé son claves para el desarrollo y crecimiento del bebé y tendrá impacto en el resto de su vida.",
+        "options": [
+            {
+                "text": "Verdadero",
+                "isCorrect": true
+            },
+            {
+                "text": "Falso",
+                "isCorrect": false
+            }
+        ]
+    }
+]

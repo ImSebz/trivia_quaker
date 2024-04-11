@@ -4,10 +4,16 @@
 }
 
 :root {
-    --main-pink: #DB75A3;
+    --main-pink: #F0047F;
+    --secondary-pink: #F251A2;
     --main-gold: #F8D772;
-    --main-green: #80B16F;
+    --main-green: #5AB557;
+    --secondary-green: #95D38E;
+    --main-dark: #001D2C;
+    --main-blue: #01A0C6;
+    --secondary-blue: #4DBDD7;
     --borders: #A36340;
+
 
 }
 
@@ -16,6 +22,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'VAG Rounded Bold', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
 }
 
 .main-trivia-background {
@@ -31,15 +42,14 @@
 }
 
 .logo-trivia {
-    justify-self: flex-start;
+    position: absolute;
     top: 0;
-    margin-top: -33%;
-    margin-bottom: 10%;
+    margin-top: 100px;
 }
 
 .logo-trivia img {
     width: 100%;
-    max-width: 300px;
+    max-width: 450px;
 }
 
 .trivia-container {
@@ -47,29 +57,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin-top: 5%;
 }
 
 .trivia-question {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--main-blue);
     padding: 20px;
-    border-radius: 30px;
-    margin-bottom: 20px;
+    border-radius: 90px;
+    margin-bottom: 50px;
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
     width: 90%;
-    height: 180px;
+    min-height: 180px;
 }
 
 .trivia-question p {
-    border: 3px solid var(--borders);
+    border: 10px solid var(--secondary-blue);
+    color: #fff;
     border-style: dashed;
-    border-radius: 20px;
+    border-radius: 80px;
     padding: 50px;
-    font-size: 1.3em;
+    font-size: 3rem;
     width: 100%;
 }
 
@@ -82,10 +95,10 @@
 }
 
 .trivia-option {
-    width: 80%;
-    height: 50px;
+    width: 75%;
+    min-height: 50px;
     background-color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     border: 3px solid var(--borders);
     border-style: dashed;
     border-radius: 20px;
@@ -95,12 +108,22 @@
     display: flex;
     height: 100%;
     align-items: center;
-    padding: 20px;  
-    font-size: 1.3rem;
+    padding: 20px;
+    font-size: 2.5rem;
 }
 
-.trivia-option:hover {
+/* .trivia-option:hover {
     transition: 0.5s ease-out;
     background-color: var(--main-pink);
     cursor: pointer;
+} */
+
+
+
+@media screen and (min-width: 1081px) {
+
+    .main-trivia-background {
+        width: 720px;
+        height: 1270px;
+    }
 }

@@ -88,7 +88,7 @@ fetch(jsonPath)
                             questionParagraph.innerHTML = `Has respondido correctamente ${correctAnswers} de las últimas 3 preguntas.`;
                             optionContainer.innerHTML = '';
                             setTimeout(() => {
-                                window.location.href = 'index.html';
+                                window.location.href = 'game.html';
                             }, 6000);
                         } else if (currentQuestionIndex < triviaData.length) {
                             showQuestion(currentQuestionIndex);

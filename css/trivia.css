@@ -43,14 +43,35 @@ body {
 }
 
 .logo-trivia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
-    margin-top: 50px;
+    margin-top: 20px;
+    flex-direction: column;
 }
 
-.logo-trivia img {
+.logo-primero, .logo-segundo {
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
+}
+
+.logo-primero {
+    margin-bottom: 20px;
+}
+
+@keyframes animationleftright {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(0deg); }
+    40% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.logo-segundo {
+    transform-origin: center;
+    animation: animationleftright 3s ease-in-out infinite;
 }
 
 .trivia-container {

@@ -56,7 +56,7 @@ fetch(jsonPath)
                 if (index < optionClasses.length) {
                     optionElement.classList.add(optionClasses[index]);
                 }
-    
+
 
                 const optionText = document.createElement('p');
                 optionText.textContent = option.text;
@@ -71,7 +71,7 @@ fetch(jsonPath)
                     if (option.isCorrect) {
                         optionElement.style.backgroundColor = 'green';
                         optionElement.classList.add('correct-option');
-                        
+
                         correctAnswers++;
                     } else {
                         optionElement.style.backgroundColor = 'red';
@@ -81,17 +81,17 @@ fetch(jsonPath)
                     // Espera un segundo, luego pasa a la siguiente pregunta
                     setTimeout(() => {
                         currentQuestionIndex++;
-                        if (currentQuestionIndex < triviaData.length) {
-                            showQuestion(currentQuestionIndex);
-                        } else {
-                            // Si no hay más preguntas, muestra el conteo de respuestas correctas
+                        if (currentQuestionIndex % 3 === 0) {
+                            // Si has respondido a 3 preguntas, muestra el conteo de respuestas correctas
                             questionContainer.innerHTML = '';
                             questionContainer.appendChild(questionParagraph);
-                            questionParagraph.innerHTML = `Has respondido correctamente ${correctAnswers} de ${triviaData.length} preguntas.`;
+                            questionParagraph.innerHTML = `Has respondido correctamente ${correctAnswers} de las últimas 3 preguntas.`;
                             optionContainer.innerHTML = '';
                             setTimeout(() => {
                                 window.location.href = 'index.html';
                             }, 6000);
+                        } else if (currentQuestionIndex < triviaData.length) {
+                            showQuestion(currentQuestionIndex);
                         }
                     }, 500);
                 });

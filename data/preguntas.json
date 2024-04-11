@@ -3,19 +3,19 @@
         "question": "¿Cuáles son las variedades que tiene Baby Quaker?",
         "options": [
             {
-                "text": "Avena-Fresa - Multicereal",
+                "text": "Avena-Fresa y Multicereal",
                 "isCorrect": false
             },
             {
-                "text": "Multicereal - Avena-banano",
+                "text": "Multicereal y Avena-banano",
                 "isCorrect": true
             },
             {
-                "text": "Avena-banano - Trigo-Banano",
+                "text": "Avena-banano y Trigo-Banano",
                 "isCorrect": false
             },
             {
-                "text": "Multicereal - Trigo-Banano",
+                "text": "Multicereal y Trigo-Banano",
                 "isCorrect": false
             }
         ]

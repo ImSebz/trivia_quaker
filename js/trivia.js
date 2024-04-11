@@ -41,10 +41,21 @@ fetch(jsonPath)
             //Limpia el contenedor de opciones
             optionContainer.innerHTML = '';
 
+            //Clases de opciones
+            const optionClasses = ['blue-option', 'pink-option', 'green-option', 'dark-option'];
+
             //Itera sobre cada opción de la pregunta actual
-            triviaItem.options.forEach((option) => {
+            //Aplico la función shuffleArray para que las opciones se muestren en orden aleatorio
+            shuffleArray(triviaItem.options).forEach((option, index) => {
                 const optionElement = document.createElement('div');
                 optionElement.classList.add('trivia-option');
+
+                // Agrega la clase de color correspondiente
+
+                if (index < optionClasses.length) {
+                    optionElement.classList.add(optionClasses[index]);
+                }
+    
 
                 const optionText = document.createElement('p');
                 optionText.textContent = option.text;
@@ -72,7 +83,7 @@ fetch(jsonPath)
                             // Si no hay más preguntas, muestra el conteo de respuestas correctas
                             questionContainer.innerHTML = '';
                             questionContainer.appendChild(questionParagraph);
-                            questionParagraph.innerHTML= `Has respondido correctamente ${correctAnswers} de ${triviaData.length} preguntas.`;
+                            questionParagraph.innerHTML = `Has respondido correctamente ${correctAnswers} de ${triviaData.length} preguntas.`;
                             optionContainer.innerHTML = '';
                             setTimeout(() => {
                                 window.location.href = 'index.html';

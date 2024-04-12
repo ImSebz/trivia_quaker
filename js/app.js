@@ -1,6 +1,6 @@
 let vitaminas = [], allowVitaminas = true, mContext, gameInterval, tazon, textScore, textTime, tazonMoved = true, baby;
 
-let assetsVitaminas = ['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10'];
+let assetsVitaminas = ['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9'];
 
 class MainScene extends Phaser.Scene {
     constructor() {
@@ -77,10 +77,11 @@ class MainScene extends Phaser.Scene {
     beginGame() {
         gameInterval = setInterval(() => {
             vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 0, assetsVitaminas[mContext.getRandomInt(0, 8)]).setScale(mContext.getRandomDouble(.25, .5)));
-        }, 350);
+        }, 450);
 
         let timeInterval = setInterval(() => {
-            textTime.setText(`00:${textTime.time}`);
+            let paddedTime = String(textTime.time).padStart(2, '0');
+            textTime.setText(`00:${paddedTime}`);
             textTime.time--;
 
             if (textTime.time < 0) {
@@ -92,7 +93,7 @@ class MainScene extends Phaser.Scene {
 
     stopGame() {
         clearInterval(gameInterval);
-        
+
         setTimeout(() => {
             //Redirecciona a index.html
             window.location.href = 'index.html';
@@ -123,7 +124,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 350 }
+            gravity: { y: 300 }
         }
     }
 }

@@ -35,7 +35,7 @@ class MainScene extends Phaser.Scene {
     }
 
     init() {
-        this.add.image((this.game.config.width) / 2, 0, 'background').setScale(0.35, .64);
+        this.add.image((this.game.config.width) / 2, (this.game.config.height) / 2, 'background').setScale(0.32, .32);
         this.add.image((this.game.config.width) / 2, (this.game.config.height) / 12, 'logo').setDepth(3).setScale(0.35);
         baby = this.add.image((this.game.config.width) / 2, (this.game.config.height) / 4.8, 'logo_baby').setScale(0.28);
         baby.angle = 0;

@@ -89,7 +89,7 @@ fetch(jsonPath)
                             optionContainer.innerHTML = '';
                             setTimeout(() => {
                                 window.location.href = 'game.html';
-                            }, 6000);
+                            }, 5000);
                         } else if (currentQuestionIndex < triviaData.length) {
                             showQuestion(currentQuestionIndex);
                         }

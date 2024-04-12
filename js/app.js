@@ -97,7 +97,7 @@ class MainScene extends Phaser.Scene {
         setTimeout(() => {
             //Redirecciona a index.html
             window.location.href = 'index.html';
-        }, 10000);
+        }, 8000);
     }
 
     getRandomInt(min, max) {

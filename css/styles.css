@@ -9,6 +9,19 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-pink: #F0047F;
+    --secondary-pink: #F251A2;
+    --main-gold: #F8D772;
+    --main-green: #5AB557;
+    --secondary-green: #95D38E;
+    --main-dark: #001D2C;
+    --secondary-dark: #657886;
+    --main-blue: #01A0C6;
+    --secondary-blue: #4DBDD7;
+    --borders: #A36340;
+}
+
 body {
     font-family: 'VAG', sans-serif;   
 }
@@ -16,4 +29,37 @@ body {
 canvas {
     height: 100% !important;
     width: 100% !important;
+}
+
+.game-end-pop {
+    position: absolute;
+    top: 50vh;
+    left: 5%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-pink);
+    color: #fff;
+    padding: 20px;
+    border-radius: 90px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 90%;
+    min-height: 180px;
+    transition: all 0.3s ease-out;
+}
+
+.game-end-pop p {
+    color: #fff;
+    border: solid 7px #fff;
+    border-style: dashed;
+    border-radius: 80px;
+    font-size: 3rem;
+    width: 98%;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

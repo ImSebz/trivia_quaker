@@ -25,9 +25,11 @@ class MainScene extends Phaser.Scene {
         this.init();
         mContext = this;
         this.physics.add.overlap(tazon, vitaminas, (tazon, vitamina) => {
-            tazon.score++;
-            textScore.setText(tazon.score);
-            vitamina.destroy();
+            if (textTime.time >= 0) {
+                tazon.score++;
+                textScore.setText(tazon.score);
+                vitamina.destroy();
+            }
         });
     }
 
@@ -86,12 +88,21 @@ class MainScene extends Phaser.Scene {
 
             if (textTime.time < 0) {
                 clearInterval(timeInterval);
+                setTimeout(() => {
+                    const gamePop = document.querySelector('.game-end-pop');
+                    const gamePElelemt = document.createElement('p');
+                    gamePop.style.display = 'flex';
+                    //Agrega atributo P con el score
+                    gamePop.appendChild(gamePElelemt);
+                    gamePElelemt.innerHTML = `¡Felicidades! Tu puntaje es de: ${tazon.score}`;
+                }, 500);
                 mContext.stopGame();
             }
         }, 1000);
     }
 
     stopGame() {
+
         clearInterval(gameInterval);
 
         setTimeout(() => {

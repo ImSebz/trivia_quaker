@@ -7,7 +7,6 @@
 body {
     display: flex;
     justify-content: center;
-
 }
 
 .main-background {
@@ -28,34 +27,31 @@ body {
 
 .logo-inicio img {
     width: 100%;
-    max-width: 500px;
+    max-width: 50vw;
+    /* Adjusted to be relative to the viewport width */
     filter: drop-shadow(0 0 2rem rgb(224, 224, 224));
 }
 
 .btn-inicio {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    min-height: 150px;
-    padding: 20px;
+    margin-top: 3vh;
+    /* Adjusted to be relative to the viewport height */
+    min-height: 15vh;
+    /* Adjusted to be relative to the viewport height */
+    padding: 2vh;
+    /* Adjusted to be relative to the viewport height */
 }
 
 .btn-inicio img {
     width: 90%;
     height: 90%;
-    max-width: 300px;
+    max-width: 30vw;
+    /* Adjusted to be relative to the viewport width */
     filter: drop-shadow(0 0 2rem crimson);
 }
 
-.btn-inicio img:hover{
+.btn-inicio img:hover {
     scale: 1.1;
     transition: 0.5s ease-out;
-}
-
-@media screen and (min-width: 1081px){
-
-    .main-background {
-        width: 720px;
-        height: 1270px;
-    }
 }

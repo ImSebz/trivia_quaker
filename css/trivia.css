@@ -217,10 +217,40 @@ body {
 
 
 
-@media screen and (min-width: 1081px) {
-
-    .main-trivia-background {
-        width: 720px;
-        height: 1270px;
+@media screen and (max-width: 768px) {
+    
+    .logo-primero, .logo-segundo {
+        width: 100%;
+        max-width: 120px;
     }
+
+    .trivia-question {
+        min-height: 120px;
+    }
+
+    .trivia-question p {
+        border: 5px solid var(--secondary-blue);
+        border-style: dashed;
+        padding: 25px;
+        font-size: 1.5rem;
+
+    }
+
+    .trivia-option {
+        height: 50px;
+        margin-top: -10px;
+    }
+
+    .trivia-option p {
+        font-size: 1.25rem;
+        padding: 0;
+    }
+
+    .trivia-option::before {
+        left: -15px;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+
 }

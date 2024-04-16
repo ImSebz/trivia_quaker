@@ -1,6 +1,6 @@
 let vitaminas = [], allowVitaminas = true, mContext, gameInterval, tazon, textScore, textTime, tazonMoved = true, baby;
 
-let assetsVitaminas = ['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9'];
+let assetsVitaminas = ['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10'];
 
 class MainScene extends Phaser.Scene {
     constructor() {
@@ -78,7 +78,7 @@ class MainScene extends Phaser.Scene {
 
     beginGame() {
         gameInterval = setInterval(() => {
-            vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 0, assetsVitaminas[mContext.getRandomInt(0, 8)]).setScale(mContext.getRandomDouble(.25, .5)));
+            vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 0, assetsVitaminas[vitaminas.length - 1]).setScale(mContext.getRandomDouble(.25, .5)));
         }, 450);
 
         let timeInterval = setInterval(() => {

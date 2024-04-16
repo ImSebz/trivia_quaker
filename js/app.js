@@ -78,13 +78,21 @@ class MainScene extends Phaser.Scene {
 
     beginGame() {
         gameInterval = setInterval(() => {
-            vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 0, assetsVitaminas[vitaminas.length - 1]).setScale(mContext.getRandomDouble(.25, .5)));
+            vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 0, assetsVitaminas[mContext.getRandomInt(0, 10)]).setScale(mContext.getRandomDouble(.25, .5)));
         }, 450);
 
         let timeInterval = setInterval(() => {
             let paddedTime = String(textTime.time).padStart(2, '0');
             textTime.setText(`00:${paddedTime}`);
             textTime.time--;
+
+            if (textTime.time === 30) {
+                clearInterval(gameInterval);
+                gameInterval = setInterval(() => {
+                    console.log('30');
+                    vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 0, assetsVitaminas[mContext.getRandomInt(0, 10)]).setScale(mContext.getRandomDouble(.25, .5)));
+                }, 250);
+            }
 
             if (textTime.time < 0) {
                 clearInterval(timeInterval);

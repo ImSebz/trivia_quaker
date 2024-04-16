@@ -221,18 +221,18 @@ body {
     
     .logo-primero, .logo-segundo {
         width: 100%;
-        max-width: 120px;
+        max-width: 80px;
     }
 
     .trivia-question {
-        min-height: 120px;
+        min-height: 100px;
     }
 
     .trivia-question p {
         border: 5px solid var(--secondary-blue);
         border-style: dashed;
-        padding: 25px;
-        font-size: 1.5rem;
+        padding: 20px;
+        font-size: 1.1rem;
 
     }
 
@@ -242,7 +242,7 @@ body {
     }
 
     .trivia-option p {
-        font-size: 1.25rem;
+        font-size: 1rem;
         padding: 0;
     }
 

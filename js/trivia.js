@@ -78,6 +78,12 @@ fetch(jsonPath)
                         optionElement.classList.add('incorrect-option');
                     }
 
+                    // Deshabilita el clic en todas las opciones
+                    const options = document.querySelectorAll('.trivia-option');
+                    options.forEach((option) => {
+                        option.style.pointerEvents = 'none';
+                    });
+
                     // Espera un segundo, luego pasa a la siguiente pregunta
                     setTimeout(() => {
                         currentQuestionIndex++;
@@ -93,7 +99,12 @@ fetch(jsonPath)
                         } else if (currentQuestionIndex < triviaData.length) {
                             showQuestion(currentQuestionIndex);
                         }
-                    }, 500);
+
+                        // Habilita el clic en todas las opciones
+                        options.forEach((option) => {
+                            option.style.pointerEvents = 'auto';
+                        });
+                    }, 2000);
                 });
             });
         }

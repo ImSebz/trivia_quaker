@@ -63,3 +63,16 @@ canvas {
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 768px) { 
+    .game-end-pop {
+        min-height: 100px;
+    }
+
+    .game-end-pop p {
+        border: 5px solid var(--secondary-blue);
+        border-style: dashed;
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}

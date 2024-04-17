@@ -78,7 +78,7 @@ class MainScene extends Phaser.Scene {
 
     beginGame() {
         gameInterval = setInterval(() => {
-            vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 0, assetsVitaminas[mContext.getRandomInt(0, 10)]).setScale(mContext.getRandomDouble(.25, .5)));
+            vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 490, assetsVitaminas[mContext.getRandomInt(0, 10)]).setScale(mContext.getRandomDouble(.25, .5)));
         }, 450);
 
         let timeInterval = setInterval(() => {
@@ -90,7 +90,7 @@ class MainScene extends Phaser.Scene {
                 clearInterval(gameInterval);
                 gameInterval = setInterval(() => {
                     console.log('30');
-                    vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 0, assetsVitaminas[mContext.getRandomInt(0, 10)]).setScale(mContext.getRandomDouble(.25, .5)));
+                    vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 490, assetsVitaminas[mContext.getRandomInt(0, 10)]).setScale(mContext.getRandomDouble(.25, .5)));
                 }, 250);
             }
 
@@ -102,7 +102,7 @@ class MainScene extends Phaser.Scene {
                     gamePop.style.display = 'flex';
                     //Agrega atributo P con el score
                     gamePop.appendChild(gamePElelemt);
-                    gamePElelemt.innerHTML = `¡Felicidades! Tu puntaje es de: ${tazon.score}`;
+                    gamePElelemt.innerHTML = `<span>¡Felicidades!</span> Tu puntaje es de: ${tazon.score}`;
                 }, 500);
                 mContext.stopGame();
             }

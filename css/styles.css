@@ -59,20 +59,22 @@ canvas {
     font-size: 3rem;
     width: 98%;
     height: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20px !important;
+}
+
+.game-end-pop p span {
+    display: block;
 }
 
 @media screen and (max-width: 768px) { 
     .game-end-pop {
-        min-height: 100px;
+        min-height: 120px;
     }
 
     .game-end-pop p {
-        border: 5px solid var(--secondary-blue);
-        border-style: dashed;
-        padding: 20px;
+        padding: 10px;
         font-size: 1.1rem;
+        height: 100px;
     }
+
 }

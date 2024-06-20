@@ -80,7 +80,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 20%;
+    margin-top: 2%;
 }
 
 .trivia-question {
@@ -133,6 +133,33 @@ body {
     font-size: 2.5rem;
     margin-left: 45px;
 }
+
+.trivia-next {
+    position: relative;
+    width: 33%;
+    height: 95px;
+    background-color: var(--secondary-green);
+    margin-bottom: 45px;
+    border-radius: 20px;
+    color: #fff;
+    transition: all 0.5s ease-out;
+}
+
+.trivia-next:hover {
+    background-color: var(--main-blue);
+    cursor: pointer;
+}
+
+.trivia-next p {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2.5rem;
+}
+
+
 
 .blue-option {
     background-color: var(--secondary-blue);
@@ -247,6 +274,23 @@ body {
     }
 
     .trivia-option::before {
+        left: -15px;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    .trivia-next {
+        height: 50px;
+        margin-top: -10px;
+    }
+
+    .trivia-next p {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+    .trivia-next::before {
         left: -15px;
         width: 50px;
         height: 50px;

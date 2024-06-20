@@ -85,7 +85,9 @@ fetch(jsonPath)
                     });
 
                     // Espera un segundo, luego pasa a la siguiente pregunta
+                    
                     setTimeout(() => {
+                        console.log(currentQuestionIndex);
                         currentQuestionIndex++;
                         if (currentQuestionIndex % 3 === 0) {
                             // Si has respondido a 3 preguntas, muestra el conteo de respuestas correctas

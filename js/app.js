@@ -60,8 +60,8 @@ class MainScene extends Phaser.Scene {
             }
         });
         textScore = this.add.text(((this.game.config.width) / 2.5) - 220, (this.game.config.height) / 3.18, tazon.score, { font: '40px VAG', fill: '#DB75A3' }).setDepth(3);
-        textTime = this.add.text(((this.game.config.width) / 1.9) + 155, (this.game.config.height) / 3.18, '00:60', { font: '40px VAG', fill: '#F8D772' }).setDepth(3);
-        textTime.time = 60;
+        textTime = this.add.text(((this.game.config.width) / 1.9) + 155, (this.game.config.height) / 3.18, '00:45', { font: '40px VAG', fill: '#F8D772' }).setDepth(3);
+        textTime.time = 45;
 
         this.tweens.add({
             targets: baby,
@@ -86,10 +86,10 @@ class MainScene extends Phaser.Scene {
             textTime.setText(`00:${paddedTime}`);
             textTime.time--;
 
-            if (textTime.time === 30) {
+            if (textTime.time === 15) {
                 clearInterval(gameInterval);
                 gameInterval = setInterval(() => {
-                    console.log('30');
+                    console.log('15');
                     vitaminas.push(this.physics.add.sprite(mContext.getRandomInt(60, 660), 490, assetsVitaminas[mContext.getRandomInt(0, 10)]).setScale(mContext.getRandomDouble(.25, .5)));
                 }, 250);
             }

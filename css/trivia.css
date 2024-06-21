@@ -121,7 +121,7 @@ body {
     width: 75%;
     height: 95px;
     background-color: #fff;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
     border-radius: 20px;
 }
 
@@ -139,7 +139,7 @@ body {
     width: 33%;
     height: 95px;
     background-color: var(--secondary-green);
-    margin-bottom: 45px;
+    margin-top: 10px;
     border-radius: 20px;
     color: #fff;
     transition: all 0.5s ease-out;
@@ -265,7 +265,6 @@ body {
 
     .trivia-option {
         height: 50px;
-        margin-top: -10px;
     }
 
     .trivia-option p {
@@ -282,7 +281,6 @@ body {
 
     .trivia-next {
         height: 50px;
-        margin-top: -10px;
     }
 
     .trivia-next p {

@@ -25,6 +25,7 @@ fetch(jsonPath)
         //Iniciar con la primera pregunta
         shuffleArray(triviaData);
         let currentQuestionIndex = 0;
+        const maxQuestions = 3; // Limitar a 3 preguntas
 
         const showQuestion = (index) => {
 
@@ -85,28 +86,29 @@ fetch(jsonPath)
                     });
 
                     // Espera un segundo, luego pasa a la siguiente pregunta
-                    
-                    setTimeout(() => {
-                        console.log(currentQuestionIndex);
+
+                    // Agregar referencia al botón .trivia-next
+                    const nextButton = document.querySelector('.trivia-next');
+
+                    // Controlador de eventos para el botón .trivia-next
+                    nextButton.addEventListener('click', function () {
                         currentQuestionIndex++;
-                        if (currentQuestionIndex % 3 === 0) {
-                            // Si has respondido a 3 preguntas, muestra el conteo de respuestas correctas
+                        if (currentQuestionIndex < maxQuestions + 1) {
+                            showQuestion(currentQuestionIndex);
+                        } else {
+                            // Ocultar el botón .trivia-next
+                            nextButton.style.display = 'none';
+                            // Mostrar el mensaje de cuántas preguntas se respondieron correctamente
                             questionContainer.innerHTML = '';
                             questionContainer.appendChild(questionParagraph);
-                            questionParagraph.innerHTML = `Has respondido correctamente ${correctAnswers} de las últimas 3 preguntas.`;
+                            questionParagraph.innerHTML = `Has respondido correctamente ${correctAnswers} de las últimas ${maxQuestions} preguntas.`;
                             optionContainer.innerHTML = '';
+                            // Redireccionar después de 5 segundos
                             setTimeout(() => {
                                 window.location.href = 'game.html';
                             }, 5000);
-                        } else if (currentQuestionIndex < triviaData.length) {
-                            showQuestion(currentQuestionIndex);
                         }
-
-                        // Habilita el clic en todas las opciones
-                        options.forEach((option) => {
-                            option.style.pointerEvents = 'auto';
-                        });
-                    }, 2000);
+                    });
                 });
             });
         }
